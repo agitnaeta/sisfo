@@ -5,6 +5,18 @@
 		{
 			parent::__construct();
 		}
+		public function allGuru()
+		{
+			$query=$this->db->get('guru');
+			if($query->num_rows>0)
+			{
+				return $query;
+			}
+			else
+			{
+				return null;
+			}
+		}
 		public function tambah()
 		{
 			$data = array(
@@ -22,7 +34,7 @@
 			$this->db->where('nip',$nip);
 			$this->db->delete('guru');
 		}
-		function get_edit($nip);
+		function get_edit($nip)
 		{
 			$this->db->where('nip',$nip);
 			$this->db->get('guru');
@@ -36,9 +48,31 @@
 				'alamat'=>$this->input->post('alamat'),
 				'golongan'=>$this->input->post('golongan'),
 				'status'=>$this->input->post('status'),
-				'tahun_masuk'=>$this->input->post('tahunMasuk'),
+				'tahun_masuk'=>$this->input->post('tahunMasuk')
 			);
-			$this->db->where('nip',,$nip);
+			$this->db->where('nip',$nip);
 			$this->db->update('guru');
 		}
+
+	function loginGuru($username, $password)
+     {
+       $this->db->select('nip, password,nama');
+       $this ->db-> from('guru');
+       $this ->db-> where('nip', $username);
+       $this ->db-> where('password', $password);
+       $this ->db-> limit(1);
+
+       $query = $this ->db-> get();
+
+       if($query -> num_rows() == 1)
+       {
+      
+         return $query->result();
+       }
+       else
+       {
+
+         return false;
+       }
+     }
 	}

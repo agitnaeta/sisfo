@@ -1,14 +1,14 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
-					  <a class="navbar-brand" href="#"> <i class="glyphicon glyphicon-home"></i> Halaman Utama</a>
+					  <a class="navbar-brand" href="" <i class="glyphicon glyphicon-home"></i> Halaman Utama</a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li >
-							<a href="#">SISWA</a>
+						<li>
+							<a href="<?php echo site_url('tu/kelola_siswa');?>">SISWA</a>
 						</li>
 						<li>
-							<a href="#">GURU</a>
+							<a id="guru" href="<?php echo site_url('tu/kelola_guru');?>">GURU</a>
 						</li>
 						<li>
 							<a href="#">BAYARAN</a>
@@ -41,7 +41,7 @@
 					<ul class="nav navbar-nav navbar-right">
 					<li>
 						<div >
-							<a title="Log Out" class="btn btn-sm btn-danger" title="Logout" href="<?php echo site_url('logout');?>">
+							<a title="Log Out" class="btn btn-sm btn-danger" title="Logout" href="<?php echo site_url('login/logout');?>">
 							<i class="glyphicon glyphicon-remove"></i>
 							</a>
 						</div>
@@ -52,5 +52,4 @@
 						
 					</ul>
 				</div>
-				
 			</nav>

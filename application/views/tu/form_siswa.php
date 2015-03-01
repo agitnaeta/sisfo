@@ -32,14 +32,14 @@ endforeach;
       <div class="modal-body">
      <div class="com-md-12 text-center"><h4>NIS : <?php echo "$nis";?></h4> </div>
       <div class="col-md-6">
-      <form action="<?php echo site_url('tu/kelola_siswa/tambah_siswa');?>" method="post">
+      <form id="myForm" action="<?php echo site_url('tu/kelola_siswa/tambah_siswa');?>" method="post">
       	<label>Tahun Ajaran</label>
-		<input class="form-control" name="tajaran" value="<?php echo "$date-$date2";?>" readonly/>
+		<input required class="form-control" name="tajaran" value="<?php echo "$date-$date2";?>" readonly/>
 		<input type="hidden" class="form-control" name="nis" value="<?php echo "$nis";?>" readonly/>
 		<label>NISN</label>
-		<input class="form-control" name="nisn" type="number" />
+		<input required class="form-control" name="nisn" min="0" type="number" />
 		<label>Nama</label>
-		<input class="form-control" name="nama" placeholder="Nama"/>
+		<input required class="form-control" name="nama" placeholder="Nama"/>
       </div>
       <div class="col-md-6">
       	<label>Tempat Lahir</label>
@@ -47,11 +47,11 @@ endforeach;
 		<label>Tanggal Lahir</label>
 		<input class="form-control" type="date" name="tglahir">
 		<label>Agama</label>
-		<select class="form-control" name="agama">
-			<option value="Islam">ISLAM</option>
-			<option value="Khatolik">KHATOLIK</option>
-			<option value="Protestan">PROTESTAN</option>
-			<option value="Hindu">HINDU</option>
+		<select required class="form-control" name="agama">
+			<option value="Islam">Islam</option>
+			<option value="Khatolik">Khatolik</option>
+			<option value="Protestan">Protestan</option>
+			<option value="Hindu">Hindu</option>
 			<option value="Budha">Budha</option>
 		</select>
       </div>

@@ -8,12 +8,16 @@
 
 		public function index()
 		{
-			$data['laman']="";
+			
 			$this->load->view('landing_page');
 		}
-		public function siswa()
+		public function facebook()
 		{
-			$data['laman']="Login Siswa";
-			$this->load->view('login_siswa');
+			$this->load->view('facebook');
+		}
+		public function beranda()
+		{
+			$this->load->view('head');
+			$this->load->view('beranda');
 		}
 	}

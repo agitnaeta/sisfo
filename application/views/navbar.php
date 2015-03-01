@@ -1,67 +1,63 @@
 <nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">
-					  <a class="navbar-brand" href="#"> <i class="glyphicon glyphicon-home"></i> Home</a>
+					  <a class="navbar-brand" href="<?php echo base_url();?>"> <i class="glyphicon glyphicon-home"></i> Home</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="#">SISWA</a>
-						</li>
-						<li>
-							<a href="#">GURU</a>
-						</li>
-						<li>
-							<a href="#">Download Materi</a>
-						</li>
+					
+					<ul id="nav" class="nav navbar-nav">
 						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#">Action</a>
+									<a href="#">Kepala Sekolah</a>
 								</li>
 								<li>
-									<a href="#">Another action</a>
+									<a href="#">Guru</a>
 								</li>
 								<li>
-									<a href="#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">Separated link</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">One more separated link</a>
+									<a href="#">Staff TU</a>
 								</li>
 							</ul>
 						</li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
+					<ul id="nav" class="nav navbar-nav">
 						<li>
-							<a href="#">Link</a>
+							<a id="medsos" href="">
+								Facebook
+							</a>
 						</li>
 						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ekstra Kulikuler<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#">Action</a>
+									<a href="#">Pramuka</a>
 								</li>
 								<li>
-									<a href="#">Another action</a>
+									<a href="#">Paskibra</a>
 								</li>
 								<li>
-									<a href="#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">Separated link</a>
+									<a href="#">PMR</a>
 								</li>
 							</ul>
 						</li>
+					</ul>
+					<ul id="nav" class="nav navbar-nav">
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Download Area<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Materi</a>
+								</li>
+								<li>
+									<a href="#">Panduan</a>
+								</li>
+								
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					
 					</ul>
 				</div>
 				

@@ -88,4 +88,25 @@
 			}
 		}
 
+	function loginSiswa($username, $password)
+     {
+       $this->db->select('nis, password,nama');
+       $this ->db-> from('siswa');
+       $this ->db-> where('nis', $username);
+       $this ->db-> where('password', $password);
+       $this ->db-> limit(1);
+
+       $query = $this ->db-> get();
+
+       if($query -> num_rows() == 1)
+       {
+    
+         return $query->result();
+       }
+       else
+       {
+         return false;
+       }
+     }
+
 	}
